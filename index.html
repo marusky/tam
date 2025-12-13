@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="assets/styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <section>
+    <div class="wall wall__left">
+      <!-- <img src="assets/tam-button-bw.svg" alt="" width="500" class="tam__btn--bw cursor-pointer"> -->
+    </div>
+    <div class="wall wall__right">
+      <!-- <img src="assets/tam-button-bw.svg" alt="" width="500" class="tam__btn--bw cursor-pointer"> -->
+    </div>
+    <div class="wall wall__top">
+      <img src="assets/tam-button-bw.svg" alt="" width="500" class="tam__btn--bw cursor-pointer">
+    </div>
+    <div class="wall wall__bottom">
+      <img src="assets/tam-button-bw.svg" alt="" width="500" class="tam__btn--bw cursor-pointer">
+    </div>
+  </section>
+  <main>
+    <img src="assets/tam-button.svg" alt="" width="500" class="tam__btn cursor-pointer">
+  </main>
+  <script>
+    const tamBtns = document.getElementsByClassName("tam__btn--bw")
+    const wall = document.getElementsByClassName("wall")
+
+    const openWall = () => {
+      Array.from(wall).forEach(element => {
+        element.classList.add("wall--open")
+      });
+
+      tamBtn.classList.add("tam--open")
+    }
+    
+    const openWalll = () => {
+
+    }
+    
+    Array.from(tamBtns).forEach((btn) => {
+      btn.addEventListener('click', openWall)
+    })
+  </script>
+</body>
+</html>
