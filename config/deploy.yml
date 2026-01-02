@@ -1,0 +1,25 @@
+service: tam
+
+image: mrshq/tam
+
+servers:
+  web:
+    - tam.mrshq.sk
+
+proxy:
+  ssl: true
+  hosts:
+    - tam.mrshq.sk
+    - www.tam.mrshq.sk
+
+registry:
+  username: mrshq
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+
+builder:
+  arch: amd64
+
+ssh:
+  user: deploy
