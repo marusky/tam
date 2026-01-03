@@ -1,0 +1,19 @@
+{
+  "name": "tam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwindcss-watch": "npx tailwindcss -i ./assets/styles.css -o ./assets/tailwind.css --watch",
+    "tailwindcss-prod": "npx tailwindcss -i ./assets/styles.css -o ./assets/tailwind.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }
+}
