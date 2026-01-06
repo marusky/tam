@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/tailwind.a8gk437.css">
+  <link rel="stylesheet" href="/assets/tailwind.a8gk438.css">
   <title>TAM</title>
 
   <style>
@@ -24,11 +24,20 @@
     .font-helvetica {
       font-family: "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
+    .navbar {
+      transition: transform 0.3s ease;
+      will-change: transform;
+    }
+
+    .navbar--hidden {
+      transform: translateY(-100%);
+    }
   </style>
 </head>
 
 <body class="font-helvetica text-[#FF3313]">
-  <div class="focus bg-[#FF3313] inside min-h-svh flex items-center justify-center relative z-50">
+  <div id="claim" class="focus bg-[#FF3313] inside min-h-svh flex items-center justify-center relative z-50">
     <h1 class="font-gravity px-10 text-5xl xl:px-0 xl:max-w-6xl xl:text-8xl text-white text-center -translate-y-4">
       TAM je celoslovenské stretnutie evanjelického dorastu <span class="text-nowrap">a mládeže</span> - miesto, kde sme všetci spolu
     </h1>
@@ -36,7 +45,7 @@
       &darr;
     </div>
   </div>
-  <header class="flex justify-between px-6 py-4 xl:px-10 xl:py-5 sticky left-0 top-0 right-0 bg-white z-30 shadow-lg shadow-[#e9e6e6]">
+  <nav class="navbar flex justify-between px-6 py-4 xl:px-10 xl:py-5 sticky left-0 top-0 right-0 bg-white z-30 shadow-lg shadow-[#e9e6e6]/30">
     <div class="flex items-center gap-12 text-lg">
       <svg class="w-12 xl:w-16" viewBox="0 0 116 74" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M111.535 36.9994C111.572 28.279 105.975 20.0821 96.2622 13.9632C86.5762 7.86147 73.0505 4.02122 57.9885 4.02122C42.9266 4.02125 29.3697 7.86151 19.6324 13.9632C9.86753 20.0821 4.20123 28.2789 4.16432 36.9994C4.12767 45.7201 9.72512 53.9177 19.4388 60.0368C29.1248 66.1385 42.6494 69.9787 57.7113 69.9788C72.7733 69.9788 86.3313 66.1385 96.0686 60.0368C105.833 53.9178 111.499 45.72 111.535 36.9994ZM115.546 36.9994C115.501 47.6027 108.626 56.9013 98.182 63.4459C87.7102 70.0076 73.3891 74 57.6944 74C41.9996 74 27.7122 70.0077 17.2955 63.4459C6.90644 56.9013 0.110513 47.6027 0.15507 36.9994C0.19989 26.3963 7.07389 17.0986 17.5178 10.5541C27.9896 3.99227 42.3106 3.4242e-05 58.0054 0C73.7001 0 87.9876 3.99235 98.4042 10.5541C108.793 17.0986 115.59 26.3963 115.546 36.9994Z" fill="#FF3313"/>
@@ -50,14 +59,14 @@
       <div id="program" class="cursor-pointer hidden xl:block">
         Program
       </div>
-      <div id="partners" class="cursor-pointer hidden xl:block">
-        Organizátori
+      <div id="about-us" class="cursor-pointer hidden xl:block">
+        O nás
       </div>
     </div>
-    <div class="border rounded-2xl px-3 py-1 xl:py-1.5 xl:text-lg ">
+    <div class="border-2 font-medium rounded-2xl px-3 py-1 xl:py-1.5 xl:text-lg ">
       Lístky čoskoro
     </div>
-  </header>
+  </nav>
   <main id="homeDiv" class="px-10 xl:px-0 max-w-6xl mx-auto space-y-24 pt-16 xl:pt-32">
     <div class="space-y-6 xl:space-y-8">
       <div class="flex justify-center items-center">
@@ -112,7 +121,7 @@
       </a>
     </div>
   </main>
-  <div class="mt-18 xl:mt-40 bg-[#FFF8F8] py-10 px-10 xl:p-0 h-147 md:h-120 xl:h-108 flex">
+  <div id="about-us-div" class="mt-18 xl:mt-40 bg-[#FFF8F8] py-10 px-10 xl:p-0 h-147 md:h-120 xl:h-108 flex">
     <div class="max-w-6xl mx-auto flex flex-col xl:flex-row gap-16 xl:gap-24 items-center">
       <p class="text-center xl:text-left text-lg font-helvetica">
         Našou túžbou je vytvoriť priestor, kde sa stretnú konfirmandi, dorasťáci a mládežníci z celého Slovenska. Miesto, kde zažijeme jednotu, budeme budovať vzťahy medzi sebou aj svoj vzťah s Bohom. Miesto, kde v sebe prebudíme túžbu byť súčasťou niečoho väčšieho, než sme my sami. Lebo kde sú dvaja alebo traja zhromaždení v mojom mene:
@@ -133,7 +142,7 @@
       </div>
     </div>
   </div>
-  <div id="partnersDiv" class="max-w-6xl mx-auto mt-52 xl:mt-32">
+  <div class="max-w-6xl mx-auto mt-52 xl:mt-32">
     <h2 class="font-gravity text-2xl xl:text-4xl text-center">Organizátori</h2>
     <div class="mt-10 xl:mt-14 flex flex-col xl:flex-row gap-8 xl:justify-evenly items-center">
       <div>
@@ -211,27 +220,80 @@
 
 
   <script>
-    const scrollToElement = (el) => {
-      el.scrollIntoView({ behavior: "smooth", block: "start" })
+    const scrollToElement = (el, offset = 140) => {
+      isProgrammaticScroll = true
+      navbar.classList.remove("navbar--hidden");
+
+      // Cancel previous unlock if it exists
+      if (scrollUnlockTimeout) {
+        clearTimeout(scrollUnlockTimeout);
+      }
+
+      const y =
+        el.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: y,
+        behavior: "smooth",
+      });
+
+      // Unlock after scrolling settles
+      scrollUnlockTimeout = setTimeout(() => {
+        lastScrollY = window.scrollY; // sync scroll position
+        isProgrammaticScroll = false;
+        scrollUnlockTimeout = null;
+      }, 1400); // slightly longer than smooth scroll
     }
     
     const arrow = document.querySelector("#arrow")
-    const header = document.querySelector("header")
+    const nav = document.querySelector("nav")
     const home = document.querySelector("#home")
     const homeDiv = document.querySelector("#homeDiv")
 
     const program = document.querySelector("#program")
     const programDiv = document.querySelector("#programDiv")
 
-    const partners = document.querySelector("#partners")
-    const partnersDiv = document.querySelector("#partnersDiv")
+    const aboutUs = document.querySelector("#about-us")
+    const aboutUsDiv = document.querySelector("#about-us-div")
 
-    console.log(partnersDiv)
+    let isProgrammaticScroll = false;
+    let scrollUnlockTimeout = null;
 
-    arrow.addEventListener("click", () => scrollToElement(header))
-    home.addEventListener("click", () => scrollToElement(homeDiv))
+    arrow.addEventListener("click", () => scrollToElement(nav, 0))
+    home.addEventListener("click", () => scrollToElement(homeDiv, 80))
     program.addEventListener("click", () => scrollToElement(programDiv))
-    partners.addEventListener("click", () => scrollToElement(partnersDiv))
+    aboutUs.addEventListener("click", () => scrollToElement(aboutUsDiv))
+
+
+    const navbar = document.querySelector("nav");
+
+    let lastScrollY = window.scrollY;
+    const navbarHeight = navbar.offsetHeight;
+    const claim = document.querySelector("#claim")
+
+    window.addEventListener("scroll", () => {
+      if (isProgrammaticScroll) return;
+
+      const currentScrollY = window.scrollY;
+
+      // Always show at top
+      if (currentScrollY <= navbarHeight + claim.offsetHeight) {
+        navbar.classList.remove("navbar--hidden");
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      // Scrolling down → hide
+      if (currentScrollY > lastScrollY) {
+        navbar.classList.add("navbar--hidden");
+      }
+      // Scrolling up → show
+      else {
+        navbar.classList.remove("navbar--hidden");
+      }
+
+      lastScrollY = currentScrollY;
+    });
 
 
     // const door = document.getElementById("door");
