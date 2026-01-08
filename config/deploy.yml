@@ -10,6 +10,8 @@ proxy:
   ssl: true
   hosts:
     - tam.mrshq.sk
+    - tam.edumiscentrum.sk
+    - www.tam.edumiscentrum.sk
   healthcheck:
     path: /
 
