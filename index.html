@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/tailwind.a8gk441.css">
+  <link rel="stylesheet" href="/assets/tailwind.css">
   <link rel="icon" type="image/x-icon" href="/assets/icon.png">
   <title>TAM</title>
 
@@ -38,14 +38,6 @@
 </head>
 
 <body class="font-helvetica text-[#231F20]">
-  <div id="claim" class="focus bg-[#231F20] inside min-h-svh flex items-center justify-center relative z-50">
-    <h1 class="font-gravity px-10 text-5xl md:text-6xl xl:px-0 xl:max-w-6xl xl:text-8xl text-white text-center -translate-y-4">
-      TAM je celoslovenské stretnutie evanjelického dorastu <span class="text-nowrap">a mládeže</span> - tam, kde sme spolu
-    </h1>
-    <div id="arrow" class="text-white rounded-full w-10 h-10 absolute left-1/2 -translate-x-1/2 bottom-4 xl:bottom-10 flex justify-center items-center text-4xl font-extralight animate-bounce cursor-pointer">
-      &darr;
-    </div>
-  </div>
   <nav class="navbar flex justify-between px-6 py-4 xl:px-10 xl:py-5 sticky left-0 top-0 right-0 bg-white shadow-lg shadow-[#e9e6e6]/30 z-50">
     <div class="flex items-center gap-12 text-lg">
       <svg class="w-12 xl:w-16" viewBox="0 0 116 74" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,56 +60,69 @@
       Vstupenky
     </a>
   </nav>
-  <main id="homeDiv" class="px-10 xl:px-0 max-w-6xl mx-auto space-y-14 md:space-y-24 pt-10 xl:pt-32">
-    <div class="space-y-4 md:space-y-8">
-      <div class="flex justify-center items-center">
-        <div class="font-gravity text-[33px] md:text-6xl xl:text-8xl px-5 py-2 md:px-10 md:pt-8 md:pb-6 xl:px-12 xl:pt-10 xl:pb-8 bg-white rounded-lg ring-3 xl:ring-4 ring-[#EF4502] ring-inset text-[#EF4502] flex justify-center items-center z-20">
-          12.
-        </div>
-        <div class="font-gravity text-4xl xl:text-9xl text-white font-bold rounded-full bg-[#EF4502] flex justify-center items-center md:-translate-x-1 relative">
-          <div class="z-10 absolute bg-[#231F20] w-1 xl:w-2 h-60 md:h-120 xl:h-144 translate-y-30 md:translate-y-62 xl:translate-y-86"></div>
-          <div class="bg-[#EF4502] rounded-full text-4xl md:text-7xl xl:text-9xl p-3 xl:p-4 -rotate-9 z-30">&horbar;</div>
-        </div>
-        <div class="font-gravity text-nowrap text-[33px] md:text-6xl xl:text-8xl px-5 py-2 md:px-10 md:pt-8 md:pb-6 xl:px-12 xl:pt-10 xl:pb-8 text-white rounded-lg bg-[#A17A40] flex justify-center items-center rotate-1 md:-translate-x-1">
-        13. 06. 2026
-        </div>
-      </div>
-      <div class="flex justify-center items-center">
-        <div class="z-30 font-gravity text-[33px] md:text-6xl xl:text-8xl px-6 py-2 md:px-8 md:pt-6 md:pb-4 xl:px-10 xl:pt-8 xl:pb-6 bg-white rounded-3xl ring-3 xl:ring-4 ring-[#005240] ring-inset text-[#005240] flex justify-center items-center -rotate-1 text-nowrap">
-          Banská Bystrica
-        </div>
-      </div>
-      <div class="flex justify-center items-center">
-        <div class="z-30 font-gravity text-[33px] md:text-6xl xl:text-8xl px-14 py-2 md:px-26 md:pt-6 md:pb-4 xl:px-32 xl:pt-8 xl:pb-6 bg-[#0273FF] rounded-lg text-white flex justify-center items-center rotate-1 text-nowrap">
-          Tipsport Aréna
-        </div>
-      </div>
-    </div>
+  <main id="homeDiv" class="px-10 xl:px-0 max-w-6xl mx-auto">
     <div>
-      <h2 id="programDiv" class="z-50 font-gravity text-2xl md:text-3xl xl:text-4xl bg-white py-3 md:py-0 relative inline-block">Program</h2>
-      <div class="mt-4 xl:mt-10 bg-[#231F20] rounded-2xl w-full py-6 md:py-10 xl:py-14 text-white flex flex-col justify-center items-center text-center">
-        <!-- <img src="/assets/logo-white-sm.svg" /> -->
-        <svg class="w-8 xl:w-18" viewBox="0 0 70 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M67.3421 22.3396C67.364 17.0744 63.985 12.1252 58.1204 8.43071C52.2721 4.74661 44.1056 2.42794 35.0114 2.42794C25.9173 2.42796 17.7319 4.74664 11.8527 8.43071C5.95686 12.1252 2.53565 17.0743 2.51336 22.3396C2.49124 27.605 5.87087 32.5545 11.7358 36.2491C17.584 39.9332 25.75 42.2519 34.8441 42.2519C43.9382 42.2519 52.1243 39.9332 58.0035 36.2491C63.8993 32.5546 67.32 27.6049 67.3421 22.3396ZM69.7635 22.3396C69.7366 28.7417 65.5855 34.3559 59.2795 38.3074C52.9568 42.2693 44.31 44.6798 34.8338 44.6798C25.3576 44.6798 16.7311 42.2694 10.4417 38.3074C4.169 34.3559 0.0657468 28.7417 0.0926494 22.3396C0.119711 15.9376 4.27011 10.3238 10.5759 6.3724C16.8986 2.41046 25.5454 2.06747e-05 35.0216 0C44.4978 0 53.1243 2.41051 59.4137 6.3724C65.6863 10.3238 69.7903 15.9376 69.7635 22.3396Z" fill="white"/>
-          <path d="M39.5146 30.9998V13.6311H46.7092L48.7077 23.9627L50.7304 13.6311H57.7433V30.9998H52.9227V20.4139L50.791 30.9998H46.4912L44.3353 20.6077V30.9998H39.5146Z" fill="white"/>
-          <path d="M23.1631 30.9998L27.0753 13.6311H34.7664L38.7392 30.9998H33.1798L32.6105 27.7174H29.1949L28.6499 30.9998H23.1631ZM29.8489 23.8779H31.9686L30.9148 17.6886L29.8489 23.8779Z" fill="white"/>
-          <path d="M15.3157 30.9998V17.7371H11.5488V13.6311H24.4118V17.7371H20.645V30.9998H15.3157Z" fill="white"/>
-        </svg>
-        <div class="mt-6 md:mt-10 xl:mt-14 font-gravity uppercase text-4xl md:text-6xl xl:text-8xl">
-          VIAC INFORMÁCIÍ<br>
-          UŽ ČOSKORO
+      <div class="flex justify-center">
+        <div class="inline-block border-3 border-[#005240] text-[#005240] text-2xl font-medium py-4 px-6 rounded-xl">
+          Banska Bystrica, 12. - 13. Jun 2026
         </div>
-        <div class="mt-4 md:mt-6 xl:mt-10 text-gray-200 text-sm xl:text-lg">
-          Stretnutie dorastu a mládeže <br>
-          12. - 13. Jún 2026
+      </div>
+      <div class="mt-6 py-12 bg-[#EF4502] rounded-2xl w-full  text-white flex flex-col justify-center items-center text-center">
+        <div class="font-gravity text-4xl md:text-6xl xl:text-8xl">
+          TAM je celoslovenske stretnutie evanjelickeho dorastu a mladeze - tam, kde sme spolu
         </div>
       </div>
     </div>
-    <div class="xl:mt-32 flex justify-center items-center">
-      <a href="https://www.instagram.com/stretnutie_tam/" target="_blank" rel="noopener nofollow noreferrer">
-        <div class="font-gravity text-[#005240] text-3xl md:text-5xl xl:text-6xl px-12 py-4 md:px-20 md:py-8 xl:px-32 xl:py-10 border-2 xl:border-5 border-[#005240] rounded-xl xl:rounded-[3rem] text-center -rotate-1">
-          Chceš vedieť viac?<br>
-          Sleduj náš Instagram
+    <div class="flex justify-center">
+      <div class="h-24 w-3 bg-[#EF4502]"></div>
+    </div>
+    <div class="relative overflow-hidden">
+      <div class="bg-[#F6F6F6] w-260 h-260 absolute left-1/2 -translate-x-1/2 top-0 rounded-full -z-10"></div>
+      <h2 class="mt-20 font-gravity text-2xl md:text-3xl xl:text-4xl">TAM ide...</h2>
+      <div class="mt-28 w-full h-100 rounded-2xl bg-[#0273FF] z-0 flex justify-end items-end p-8 relative">
+        <img src='assets/map.png' alt='' class="absolute left-1/2 -translate-x-1/2 -top-38 w-[92%]">
+        <div class="px-5 py-2.5 rounded-xl text-lg text-white bg-[#005240]">Prihlasenych 0 ludi</div>
+      </div>
+    </div>
+    <div class="mt-8 grid grid-cols-2 grid-rows-2 text-white gap-8">
+      <a href="" class="row-span-2 bg-[#EF4502] rounded-2xl p-8 h-130 flex flex-col justify-between items-start relative">
+        <p class="font-gravity text-4xl tracking-wide">
+          Jednotlivec<br/>
+          15 € / osoba
+        </p>
+        <div>
+          <p class="text-lg">
+            Pri registrácii do 30. apríla: 18 € <br>
+            Pri registrácii do 31. mája: 20 €
+          </p>
+          <p class="mt-2 text-sm">
+            Ceny vstupeniek sú uvedené bez nocľahu. Nocľah formou <br>
+            „karimatka“ je možné pridať za príplatok: 1 noc: +5 €, 2 noci: +10 €.
+          </p>
+        </div>
+      </a>
+      <a class="bg-[#005240] rounded-2xl flex flex-col justify-between items-start p-8">
+        <p class="font-gravity text-4xl tracking-wide">
+          Skupinová skupinka 10+<br/>
+          13 € / osoba
+        </p>
+        <div>
+          <p class="text-lg">
+            Pri registrácii do 30. apríla: 16 € / osoba <br>
+            Pri registrácii do 31. mája: 18 € / osoba
+          </p>
+        </div>
+      </a>
+      <a class="bg-[#A17A40] rounded-2xl flex flex-col justify-between items-start p-8">
+        <p class="font-gravity text-4xl tracking-wide">
+          Skupinová vstupenka 30+<br/>
+          11 € / osoba
+        </p>
+        <div>
+          <p class="text-lg">
+            Pri registrácii do 30. apríla: 14 € / osoba <br>
+            Pri registrácii do 31. mája: 26 € / osoba
+          </p>
         </div>
       </a>
     </div>
@@ -137,19 +142,27 @@
           <li class="words hover:text-[#231F20]">3 rečníci</li>
           <li class="words hover:text-[#231F20]">Koncerty</li>
           <li class="words hover:text-[#231F20]">2 pódiá</li>
-          <li class="words hover:text-[#231F20]">Afterparty</li>
+          <li class="words hover:text-[#231F20]">Afterka</li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="max-w-6xl mx-auto mt-46 md:mt-60 xl:mt-32">
+  <div class="xl:mt-32 flex justify-center items-center">
+      <a href="https://www.instagram.com/stretnutie_tam/" target="_blank" rel="noopener nofollow noreferrer">
+        <div class="font-gravity text-[#0273FF] text-3xl md:text-5xl xl:text-6xl px-12 py-4 md:px-20 md:py-8 xl:px-32 xl:py-18 border-2 xl:border-5 border-[#0273FF] rounded-xl xl:rounded-[3rem] text-center -rotate-1">
+          Chceš vedieť viac?<br>
+          Sleduj náš Instagram
+        </div>
+      </a>
+    </div>
+  <div class=" mt-46 md:mt-60 xl:mt-32">
     <h2 class="font-gravity text-2xl md:text-3xl xl:text-4xl text-center">Organizátori</h2>
     <div class="mt-10 xl:mt-14 flex flex-col lg:flex-row lg:justify-center md:gap-12 xl:flex-row gap-8 xl:justify-evenly items-center">
       <div>
         <a href="https://www.edumiscentrum.sk/" target="_blank" rel="noopener noreferrer nofollow">
           <div class="bg-[#EF4502] text-white flex flex-col justify-center items-center gap-2 xl:gap-3 px-10 py-8 xl:px-18 xl:py-12 -rotate-2 rounded-lg">
             <div class="text-5xl md:text-7xl xl:text-8xl font-gravity">EMC ECAV</div>
-            <div class="text-[.54rem] md:text-[.9rem] xl:text-base">Edukačno-misijné centrum</div>
+            <div class="text-[.54rem] md:text-[.9rem] xl:text-base">Organizátor</div>
           </div>
         </a>
       </div>
