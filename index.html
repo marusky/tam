@@ -85,13 +85,13 @@
       </div>
     </div>
     <div class="mt-8 grid grid-cols-2 grid-rows-2 text-white gap-8">
-      <a href="" class="row-span-2 bg-[#EF4502] rounded-2xl p-8 h-130 flex flex-col justify-between items-start relative">
+      <a href="" class="row-span-2 bg-[#EF4502] rounded-2xl p-8 h-130 flex flex-col justify-between items-start relative overflow-hidden">
         <p class="font-gravity text-4xl tracking-wide">
           Jednotlivec<br/>
           15 € / osoba
         </p>
-        <div>
-          <p class="text-lg">
+        <div class="relative z-10">
+          <p class="z-50 text-lg">
             Pri registrácii do 30. apríla: 18 € <br>
             Pri registrácii do 31. mája: 20 €
           </p>
@@ -100,30 +100,33 @@
             „karimatka“ je možné pridať za príplatok: 1 noc: +5 €, 2 noci: +10 €.
           </p>
         </div>
+        <img src="assets/pole.png" alt="" class="z-0 absolute top-0 -right-10 h-130">
       </a>
-      <a class="bg-[#005240] rounded-2xl flex flex-col justify-between items-start p-8">
-        <p class="font-gravity text-4xl tracking-wide">
+      <a class="bg-[#005240] rounded-2xl flex flex-col justify-between items-start p-8 relative">
+        <p class="z-10 font-gravity text-4xl tracking-wide">
           Skupinová skupinka 10+<br/>
           13 € / osoba
         </p>
-        <div>
+        <div class="z-10">
           <p class="text-lg">
             Pri registrácii do 30. apríla: 16 € / osoba <br>
             Pri registrácii do 31. mája: 18 € / osoba
           </p>
         </div>
+        <img src="assets/small-pole.png" alt="" class="absolute bottom-0 right-10 h-38">
       </a>
-      <a class="bg-[#A17A40] rounded-2xl flex flex-col justify-between items-start p-8">
-        <p class="font-gravity text-4xl tracking-wide">
+      <a class="bg-[#A17A40] rounded-2xl flex flex-col justify-between items-start p-8 relative">
+        <p class="font-gravity text-4xl tracking-wide z-10">
           Skupinová vstupenka 30+<br/>
           11 € / osoba
         </p>
-        <div>
+        <div class="z-10">
           <p class="text-lg">
             Pri registrácii do 30. apríla: 14 € / osoba <br>
             Pri registrácii do 31. mája: 26 € / osoba
           </p>
         </div>
+        <img src="assets/group.png" alt="" class="absolute bottom-4 right-8 w-56">
       </a>
     </div>
   </main>
@@ -148,13 +151,47 @@
     </div>
   </div>
   <div class="xl:mt-32 flex justify-center items-center">
-      <a href="https://www.instagram.com/stretnutie_tam/" target="_blank" rel="noopener nofollow noreferrer">
-        <div class="font-gravity text-[#0273FF] text-3xl md:text-5xl xl:text-6xl px-12 py-4 md:px-20 md:py-8 xl:px-32 xl:py-18 border-2 xl:border-5 border-[#0273FF] rounded-xl xl:rounded-[3rem] text-center -rotate-1">
-          Chceš vedieť viac?<br>
-          Sleduj náš Instagram
-        </div>
-      </a>
+    <a href="https://www.instagram.com/stretnutie_tam/" target="_blank" rel="noopener nofollow noreferrer">
+      <div class="font-gravity text-[#0273FF] text-3xl md:text-5xl xl:text-6xl px-12 py-4 md:px-20 md:py-8 xl:px-32 xl:py-18 border-2 xl:border-5 border-[#0273FF] rounded-xl xl:rounded-[3rem] text-center">
+        Chceš vedieť viac?<br>
+        Sleduj náš Instagram
+      </div>
+    </a>
+  </div>
+  <div class="mt-32 max-w-6xl mx-auto grid grid-cols-2 grid-rows-1 text-white text-center gap-8">
+    <div class="rounded-2xl bg-[#A17A40] py-14 px-18">
+      <h4 class="font-gravity text-5xl ">Piatok - 12. Jún</h4>
+      <div class="mt-12 space-y-6">
+        <p class="mb-2 text-lg">16:00 - 17:30</p>
+        <p class="font-gravity text-5xl">Registrácia</p>
+        <hr>
+        <p class="mb-2 text-lg">19:00 - 21:00</p>
+        <p class="font-gravity text-5xl">Hlavný program</p>
+        <hr>
+        <p class="mb-2 text-lg">21:30 - 22:30</p>
+        <p class="font-gravity text-5xl">Koncert</p>
+        <hr>
+        <p class="mb-2 text-lg">23:00</p>
+        <p class="font-gravity text-5xl">Game night</p>
+      </div>
     </div>
+    <div class="rounded-2xl bg-[#EF4502] py-14 px-18">
+      <h4 class="font-gravity text-5xl ">Sobota - 13. Jún</h4>
+      <div class="mt-12 space-y-6">
+        <p class="mb-2 text-lg">09:00 - 10:30</p>
+        <p class="font-gravity text-5xl">Hlavný program</p>
+        <hr>
+        <p class="mb-2 text-lg">11:00 - 18:00</p>
+        <p class="font-gravity text-5xl">Minifestival v parku</p>
+        <hr>
+        <p class="mb-2 text-lg">19:00 - 21:00</p>
+        <p class="font-gravity text-5xl">Hlavný program</p>
+        <hr>
+        <p class="mb-2 text-lg">21:45</p>
+        <p class="font-gravity text-5xl">Afterka</p>
+      </div>
+    </div>
+  </div>
   <div class=" mt-46 md:mt-60 xl:mt-32">
     <h2 class="font-gravity text-2xl md:text-3xl xl:text-4xl text-center">Organizátori</h2>
     <div class="mt-10 xl:mt-14 flex flex-col lg:flex-row lg:justify-center md:gap-12 xl:flex-row gap-8 xl:justify-evenly items-center">
@@ -177,11 +214,10 @@
   </div>
   <div class="mt-20 bg-[#0273FF] text-white pt-8 pb-12 md:pt-14 md:pb-16 xl:pt-18 xl:pb-22">
     <div class="max-w-5xl mx-auto">
-      <h2 class="xl:text-lg font-medium text-center">Partner</h2>
-      <div class="mt-4 xl:mt-10 text-center font-gravity text-4xl md:text-5xl xl:text-6xl">
+      <h2 class="xl:text-lg text-center">Banská Bystrica, Tipsport Aréna I 12. - 13. Jún 2026</h2>
+      <div class="mt-4 xl:mt-10 text-center font-gravity text-4xl md:text-5xl xl:text-8xl">
         <a href="https://sem.sk/" target="_blank" rel="noopener noreferrer nofollow">
-          SEM - Spoločenstvo <br>
-          evanjelickej mládeže
+          Vidíme sa TAM?
         </a>
       </div>
     </div>
@@ -258,7 +294,6 @@
       }, 1400); // slightly longer than smooth scroll
     }
     
-    const arrow = document.querySelector("#arrow")
     const nav = document.querySelector("nav")
     const home = document.querySelector("#home")
     const homeDiv = document.querySelector("#homeDiv")
@@ -272,7 +307,6 @@
     let isProgrammaticScroll = false;
     let scrollUnlockTimeout = null;
 
-    arrow.addEventListener("click", () => scrollToElement(nav, 0))
     home.addEventListener("click", () => scrollToElement(homeDiv, 80))
     program.addEventListener("click", () => scrollToElement(programDiv))
     aboutUs.addEventListener("click", () => scrollToElement(aboutUsDiv))
