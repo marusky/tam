@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-open .faq-answer {
+  display: block;
+}
+
+.faq-open .faq-chevron {
+  transform: rotate(0deg);
+}
+
+.faq-chevron {
+  transition: transform 0.2s ease;
+  transform: rotate(180deg);
+}
