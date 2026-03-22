@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/tailwind.v2-3.css">
+  <link rel="stylesheet" href="/assets/tailwind.v2-5.css">
   <link rel="icon" type="image/x-icon" href="/assets/icon.png">
   <title>TAM</title>
 
@@ -399,13 +399,19 @@
           Budeme ti vďační za tvoju finančnú podporu. Peniaze použijeme na realizáciu stretnutia, ktoré budujeme od nuly. Pomôžu pokryť náklady spojené s programom, dobrovoľníkmi a účastníkmi. Tvoje peniaze pôjdu aj na zabezpečenie minifestivalu v parku pod Múzeom SNP, distribúciu promo materiálov a mnoho ďalšieho. <br>Ďakujeme, že si v tom s nami.
         </p>
       </div>
-      <img src="assets/qr.png" alt='' class="w-80">
+      <a href="https://payme.sk/2/q/PME?IBAN=SK1211110000001732064004&PI=%2FVS663312%2FSS%2FKS&MSG=Evan.dni+-+ml%C3%A1de%C5%BE&CN=ECAV" class="relative">
+        <img src="assets/qr.png" alt='' class="w-80">
+        <div class="drop-shadow-lg bg-[#BFE503] px-4 py-2 rounded-2xl absolute -right-4 -top-2 rotate-6 lg:hidden">
+          klikni na mňa
+        </div>
+      </a>
     </div>
   </div>
-  <div class="bg-[#F6F6F6] lg:bg-white lg:px-6 mx-auto max-w-6xl flex flex-col lg:flex-col-reverse pt-10 gap-10 lg:pt-20 lg:gap-20 lg:pb-20 xl:mt-30 xl:gap-28 xl:pb-28">
+  <div class="bg-[#F6F6F6] lg:bg-white lg:px-6 mx-auto max-w-6xl flex flex-col lg:flex-col-reverse pt-10 gap-10 lg:pt-20 lg:gap-20 lg:pb-20 xl:mt-30 xl:gap-28 xl:pb-28 relative">
     <div class="lg:bg-[#F6F6F6] overflow-hidden lg:rounded-2xl">
-      <img src="assets/places-black.png" alt="" class="lg:hidden">
+      <img src="assets/places-black-done.png" alt="" class="lg:hidden">
       <img src="assets/places.png" alt="" class="hidden lg:block">
+      <img id="tree" src="assets/tree.png" alt="" class="absolute lg:hidden z-10 bottom-0 left-1/2 -translate-x-[54%] w-[40%]">
     </div>
   </div>
   <div class="bg-[#231F20] lg:bg-[#0273FF] text-white pt-6 pb-12 md:pt-14 md:pb-16 xl:pt-18 xl:pb-22">
@@ -577,6 +583,15 @@
 
       lastScrollY = currentScrollY;
     });
+
+    const tree = document.querySelector('#tree')
+    tree.addEventListener("click", () => {
+      const width = window.innerWidth;
+      const newX = 15 + Math.random() * 70
+
+      console.log(newX)
+      tree.style.left = `${newX}%`;
+    })
   </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/tailwind.v2-3.css">
+  <link rel="stylesheet" href="/assets/tailwind.v2-5.css">
   <link rel="icon" type="image/x-icon" href="/assets/icon.png">
   <title>TAM</title>
 
@@ -297,9 +297,10 @@
         </a>
       </div>
     </div>
-    <div class="lg:bg-[#F6F6F6] overflow-hidden lg:rounded-2xl">
-      <img src="assets/places-black.png" alt="" class="lg:hidden">
+    <div class="lg:bg-[#F6F6F6] overflow-hidden lg:rounded-2xl relative">
+      <img src="assets/places-black-done.png" alt="" class="lg:hidden">
       <img src="assets/places.png" alt="" class="hidden lg:block">
+      <img id="tree" src="assets/tree.png" alt="" class="absolute lg:hidden z-10 bottom-0 left-1/2 -translate-x-[54%] w-[40%]">
     </div>
   </div>
   <div class="bg-[#231F20] lg:bg-[#0273FF] text-white pt-6 pb-12 md:pt-14 md:pb-16 xl:pt-18 xl:pb-22">
@@ -480,6 +481,14 @@
 
       lastScrollY = currentScrollY;
     });
+
+    const tree = document.querySelector('#tree')
+    tree.addEventListener("click", () => {
+      const width = window.innerWidth;
+      const newX = 15 + Math.random() * 70
+
+      tree.style.left = `${newX}%`;
+    })
   </script>
 </body>
 </html>
