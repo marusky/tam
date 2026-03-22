@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/tailwind.v2-5.css">
+  <link rel="stylesheet" href="/assets/tailwind.v2-6.css">
   <link rel="icon" type="image/x-icon" href="/assets/icon.png">
   <title>TAM</title>
 
@@ -40,7 +40,7 @@
 <body class="font-helvetica text-[#231F20]">
   <nav class="navbar flex justify-between px-6 py-4 xl:px-10 xl:py-5 sticky left-0 top-0 right-0 bg-white shadow-lg shadow-[#e9e6e6]/30 z-50">
     <div class="flex items-center gap-12 text-lg">
-      <a href='/v2.html'>
+      <a href='/index.html'>
         <svg class="border border-white w-12 xl:w-16" viewBox="0 0 116 74" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M111.535 36.9994C111.572 28.279 105.975 20.0821 96.2622 13.9632C86.5762 7.86147 73.0505 4.02122 57.9885 4.02122C42.9266 4.02125 29.3697 7.86151 19.6324 13.9632C9.86753 20.0821 4.20123 28.2789 4.16432 36.9994C4.12767 45.7201 9.72512 53.9177 19.4388 60.0368C29.1248 66.1385 42.6494 69.9787 57.7113 69.9788C72.7733 69.9788 86.3313 66.1385 96.0686 60.0368C105.833 53.9178 111.499 45.72 111.535 36.9994ZM115.546 36.9994C115.501 47.6027 108.626 56.9013 98.182 63.4459C87.7102 70.0076 73.3891 74 57.6944 74C41.9996 74 27.7122 70.0077 17.2955 63.4459C6.90644 56.9013 0.110513 47.6027 0.15507 36.9994C0.19989 26.3963 7.07389 17.0986 17.5178 10.5541C27.9896 3.99227 42.3106 3.4242e-05 58.0054 0C73.7001 0 87.9876 3.99235 98.4042 10.5541C108.793 17.0986 115.59 26.3963 115.546 36.9994Z" fill="#231F20"/>
           <path d="M65.4429 51.3431V22.5766H77.3587L80.6687 39.6881L84.0187 22.5766H95.6337V51.3431H87.6497V33.8104L84.119 51.3431H76.9976L73.4269 34.1314V51.3431H65.4429Z" fill="#231F20"/>
@@ -48,10 +48,10 @@
           <path d="M25.3628 51.3429V29.3769H19.124V22.5764H40.4281V29.3769H34.1893V51.3429H25.3628Z" fill="#231F20"/>
         </svg>
       </a>
-      <a href="/v2.html" class="cursor-pointer hidden md:block">
+      <a href="/index.html" class="cursor-pointer hidden md:block">
         Domov
       </a>
-      <a href="/v2.html#programDiv" class="cursor-pointer hidden md:block">
+      <a href="/index.html#programDiv" class="cursor-pointer hidden md:block">
         Program
       </a>
       <a href="/info.html" class="cursor-pointer hidden md:block">
@@ -399,12 +399,21 @@
           Budeme ti vďační za tvoju finančnú podporu. Peniaze použijeme na realizáciu stretnutia, ktoré budujeme od nuly. Pomôžu pokryť náklady spojené s programom, dobrovoľníkmi a účastníkmi. Tvoje peniaze pôjdu aj na zabezpečenie minifestivalu v parku pod Múzeom SNP, distribúciu promo materiálov a mnoho ďalšieho. <br>Ďakujeme, že si v tom s nami.
         </p>
       </div>
-      <a href="https://payme.sk/2/q/PME?IBAN=SK1211110000001732064004&PI=%2FVS663312%2FSS%2FKS&MSG=Evan.dni+-+ml%C3%A1de%C5%BE&CN=ECAV" class="relative">
-        <img src="assets/qr.png" alt='' class="w-80">
+      <div class="inline-block relative p-4 border-2 rounded-xl ">
+        <a href="https://payme.sk/2/q/PME?IBAN=SK1211110000001732064004&PI=%2FVS663312%2FSS%2FKS&MSG=Evan.dni+-+ml%C3%A1de%C5%BE&CN=ECAV">
+          <img src="assets/qr-code.png" alt='' class="w-70">
+        </a>
+        <ul class="font-helvetica text-center mt-4">
+          <li class="cursor-copy">Názov účtu: ECAV</li>
+          <li class="cursor-copy">IBAN: SK12 1111 0000 0017 3206 4004</li>
+          <li class="cursor-copy">VS: 663 312</li>
+        </ul>
         <div class="drop-shadow-lg bg-[#BFE503] px-4 py-2 rounded-2xl absolute -right-4 -top-2 rotate-6 lg:hidden">
-          klikni na mňa
+          <a href="https://payme.sk/2/q/PME?IBAN=SK1211110000001732064004&PI=%2FVS663312%2FSS%2FKS&MSG=Evan.dni+-+ml%C3%A1de%C5%BE&CN=ECAV">
+            klikni na mňa
+          </a>
         </div>
-      </a>
+      </div>
     </div>
   </div>
   <div class="bg-[#F6F6F6] lg:bg-white lg:px-6 mx-auto max-w-6xl flex flex-col lg:flex-col-reverse pt-10 gap-10 lg:pt-20 lg:gap-20 lg:pb-20 xl:mt-30 xl:gap-28 xl:pb-28 relative">
@@ -592,6 +601,50 @@
       console.log(newX)
       tree.style.left = `${newX}%`;
     })
+
+    const isLargeScreen = () => window.matchMedia('(min-width: 1024px)').matches;
+    document.querySelectorAll('.cursor-copy').forEach(item => {
+      item.addEventListener('click', async (e) => {
+
+        if (!isLargeScreen()) return;
+
+        // Extract only value after colon
+        const fullText = item.innerText;
+        const value = fullText.split(':').slice(1).join(':').trim();
+
+        try {
+          await navigator.clipboard.writeText(value);
+
+          // Create tooltip
+          const tooltip = document.createElement('div');
+          tooltip.className = 'copy-tooltip';
+          tooltip.innerText = 'Skopírované ✓';
+
+          document.body.appendChild(tooltip);
+
+          // Position near cursor
+          const x = e.clientX || (window.innerWidth / 2);
+          const y = e.clientY || (window.innerHeight / 2);
+
+          tooltip.style.left = (x + 12) + 'px';
+          tooltip.style.top = (y + 12) + 'px';
+
+          // Trigger animation
+          requestAnimationFrame(() => {
+            tooltip.classList.add('show');
+          });
+
+          // Fade out
+          setTimeout(() => {
+            tooltip.classList.remove('show');
+            setTimeout(() => tooltip.remove(), 200);
+          }, 900);
+
+        } catch (err) {
+          console.error('Niečo sa pokazilo.', err);
+        }
+      });
+    });
   </script>
 </body>
 </html>
