@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/tailwind.v2-8.css">
+  <link rel="stylesheet" href="/assets/tailwind.v2-9.css">
   <link rel="icon" type="image/x-icon" href="/assets/icon.png">
   <title>TAM</title>
 
@@ -45,27 +45,56 @@
         <span class="lg:hidden">Stiahni si promo balíček pre svoj zbor!</span>
       </a>
     </div>
-    <div class="flex justify-between px-6 py-4 xl:px-10 xl:py-5">
-      <div class="flex items-center gap-12 text-lg">
-        <svg id="home2" class="border border-white cursor-pointer w-12 xl:w-16" viewBox="0 0 116 74" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M111.535 36.9994C111.572 28.279 105.975 20.0821 96.2622 13.9632C86.5762 7.86147 73.0505 4.02122 57.9885 4.02122C42.9266 4.02125 29.3697 7.86151 19.6324 13.9632C9.86753 20.0821 4.20123 28.2789 4.16432 36.9994C4.12767 45.7201 9.72512 53.9177 19.4388 60.0368C29.1248 66.1385 42.6494 69.9787 57.7113 69.9788C72.7733 69.9788 86.3313 66.1385 96.0686 60.0368C105.833 53.9178 111.499 45.72 111.535 36.9994ZM115.546 36.9994C115.501 47.6027 108.626 56.9013 98.182 63.4459C87.7102 70.0076 73.3891 74 57.6944 74C41.9996 74 27.7122 70.0077 17.2955 63.4459C6.90644 56.9013 0.110513 47.6027 0.15507 36.9994C0.19989 26.3963 7.07389 17.0986 17.5178 10.5541C27.9896 3.99227 42.3106 3.4242e-05 58.0054 0C73.7001 0 87.9876 3.99235 98.4042 10.5541C108.793 17.0986 115.59 26.3963 115.546 36.9994Z" fill="#231F20"/>
-          <path d="M65.4429 51.3431V22.5766H77.3587L80.6687 39.6881L84.0187 22.5766H95.6337V51.3431H87.6497V33.8104L84.119 51.3431H76.9976L73.4269 34.1314V51.3431H65.4429Z" fill="#231F20"/>
-          <path d="M38.3589 51.3431L44.8384 22.5766H57.5767L64.1565 51.3431H54.9488L54.0059 45.9068H48.3489L47.4462 51.3431H38.3589ZM49.4322 39.5476H52.9428L51.1975 29.2968L49.4322 39.5476Z" fill="#231F20"/>
-          <path d="M25.3628 51.3429V29.3769H19.124V22.5764H40.4281V29.3769H34.1893V51.3429H25.3628Z" fill="#231F20"/>
-        </svg>
-        <div id="home" class="cursor-pointer hidden md:block">
-          Domov
+    <div class="relative">
+      <div class="flex justify-between px-6 py-4 xl:px-10 xl:py-5">
+        <div class="flex items-center gap-12 text-lg">
+          <svg id="home2" class="border border-white cursor-pointer w-12 xl:w-16" viewBox="0 0 116 74">
+            <path d="M111.535 36.9994C111.572 28.279 105.975 20.0821 96.2622 13.9632C86.5762 7.86147 73.0505 4.02122 57.9885 4.02122C42.9266 4.02125 29.3697 7.86151 19.6324 13.9632C9.86753 20.0821 4.20123 28.2789 4.16432 36.9994C4.12767 45.7201 9.72512 53.9177 19.4388 60.0368C29.1248 66.1385 42.6494 69.9787 57.7113 69.9788C72.7733 69.9788 86.3313 66.1385 96.0686 60.0368C105.833 53.9178 111.499 45.72 111.535 36.9994ZM115.546 36.9994C115.501 47.6027 108.626 56.9013 98.182 63.4459C87.7102 70.0076 73.3891 74 57.6944 74C41.9996 74 27.7122 70.0077 17.2955 63.4459C6.90644 56.9013 0.110513 47.6027 0.15507 36.9994C0.19989 26.3963 7.07389 17.0986 17.5178 10.5541C27.9896 3.99227 42.3106 3.4242e-05 58.0054 0C73.7001 0 87.9876 3.99235 98.4042 10.5541C108.793 17.0986 115.59 26.3963 115.546 36.9994Z" fill="#231F20"/>
+            <path d="M65.4429 51.3431V22.5766H77.3587L80.6687 39.6881L84.0187 22.5766H95.6337V51.3431H87.6497V33.8104L84.119 51.3431H76.9976L73.4269 34.1314V51.3431H65.4429Z" fill="#231F20"/>
+            <path d="M38.3589 51.3431L44.8384 22.5766H57.5767L64.1565 51.3431H54.9488L54.0059 45.9068H48.3489L47.4462 51.3431H38.3589ZM49.4322 39.5476H52.9428L51.1975 29.2968L49.4322 39.5476Z" fill="#231F20"/>
+            <path d="M25.3628 51.3429V29.3769H19.124V22.5764H40.4281V29.3769H34.1893V51.3429H25.3628Z" fill="#231F20"/>
+          </svg>
+
+          <div id="program" class="cursor-pointer hidden md:block">
+            Program
+          </div>
+
+          <a href="/info.html" class="hidden md:block">
+            Info
+          </a>
+
+          <a href="/about-us.html" class="hidden md:block">
+            O nás
+          </a>
         </div>
-        <div id="program" class="cursor-pointer hidden md:block">
-          Program
+
+        <div class="flex items-center gap-4">
+          <a
+            href="https://www.edumiscentrum.sk/product/tam-2026-vstupenka/"
+            class="hidden md:block text-white font-medium bg-[#0273FF] rounded-full px-5 py-2.5 xl:text-xl"
+          >
+            Vstupenky
+          </a>
+
+          <button
+            id="mobileMenuBtn"
+            class="md:hidden text-3xl"
+          >
+            ☰
+          </button>
         </div>
-        <a href="/info.html" class="cursor-pointer hidden md:block">
-          Info
-        </a>
       </div>
-      <a href="https://www.edumiscentrum.sk/product/tam-2026-vstupenka/" class="text-white font-medium bg-[#0273FF] rounded-full px-5 py-2.5 xl:text-xl ">
-        Vstupenky
-      </a>
+
+      <div
+        id="mobileMenu"
+        class="overflow-hidden max-h-0 opacity-0 scale-y-95 origin-top
+              transition-[max-height,opacity,transform]
+              duration-300 ease-in-out"
+      >
+        <a id="program" class="block px-6 py-4 border-b border-slate-200">Program</a>
+        <a href="/info.html" class="block px-6 py-4 border-b border-slate-200">Info</a>
+        <a href="/about-us.html" class="block px-6 py-4">O nás</a>
+      </div>
     </div>
   </nav>
   <main id="homeDiv" class="px-6 xl:px-0 max-w-6xl mx-auto">
@@ -423,15 +452,53 @@
     const home2 = document.querySelector("#home2")
     const homeDiv = document.querySelector("#homeDiv")
 
-    const program = document.querySelector("#program")
+    const programs = document.querySelectorAll("#program")
     const programDiv = document.querySelector("#programDiv")
 
     let isProgrammaticScroll = false;
     let scrollUnlockTimeout = null;
+    let ignoreScroll = false;
 
-    home.addEventListener("click", () => scrollToElement(homeDiv, 80))
-    home2.addEventListener("click", () => scrollToElement(homeDiv, 80))
-    program.addEventListener("click", () => scrollToElement(programDiv))
+    const btn = document.getElementById("mobileMenuBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    let menuOpen = false;
+
+    btn.addEventListener("click", () => {
+      setMenu(!menuOpen);
+    });
+
+    function setMenu(state) {
+      menuOpen = state;
+
+      ignoreScroll = true;
+
+      if (menuOpen) {
+        menu.style.maxHeight = menu.scrollHeight + "px";
+        menu.classList.remove("opacity-0", "scale-y-95");
+        menu.classList.add("opacity-100", "scale-y-100");
+      } else {
+        menu.style.maxHeight = "0px";
+        menu.classList.add("opacity-0", "scale-y-95");
+        menu.classList.remove("opacity-100", "scale-y-100");
+      }
+
+      setTimeout(() => {
+        ignoreScroll = false;
+      }, 350);
+    }
+
+    home2.addEventListener("click", () => {
+      scrollToElement(homeDiv, 140)
+      setMenu(false);
+    })
+    programs.forEach((program) => {
+      program.addEventListener("click", () => {
+        scrollToElement(programDiv, 125)
+        navbar.classList.add("navbar--hidden");
+        if (menuOpen) setMenu(false);
+      })
+    })
 
 
     const navbar = document.querySelector("nav");
@@ -462,7 +529,7 @@
     items.forEach(item => observer.observe(item));
 
     window.addEventListener("scroll", () => {
-      if (isProgrammaticScroll) return;
+      if (isProgrammaticScroll || ignoreScroll) return;
 
       const currentScrollY = window.scrollY;
 
@@ -476,6 +543,7 @@
       // Scrolling down → hide
       if (currentScrollY > lastScrollY) {
         navbar.classList.add("navbar--hidden");
+        if (menuOpen) setMenu(false);
       }
       // Scrolling up → show
       else {
